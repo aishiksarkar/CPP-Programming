@@ -1,16 +1,11 @@
+// C++ program using  __builtin_popcount()
 #include <iostream>
 using namespace std;
 
-int numof1(int n){
-    int ans=0;
-    while(n != 0){
-        n = n & n-1;
-        ans++;
-    }
-    return ans;
-}
+int main()
+{
+	cout << __builtin_popcount(4) << endl;
+	cout << __builtin_popcount(15);
 
-int main(){
-    cout<<numof1(7)<<endl;
-    return 0;
+	return 0;
 }
